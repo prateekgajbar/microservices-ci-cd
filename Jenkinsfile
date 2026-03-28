@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/prateekgajbar/microservices-ci-cd.git'
-            }
-        }
-
         stage('Build Docker Images') {
             steps {
                 sh 'docker-compose build'
