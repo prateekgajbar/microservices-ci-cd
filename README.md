@@ -162,7 +162,7 @@ microservices-ci-cd/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -318,7 +318,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo '🔄 Fetching latest code from GitHub...'
+                echo ' Fetching latest code from GitHub...'
                 checkout scm
             }
         }
@@ -332,21 +332,21 @@ pipeline {
 
         stage('Stop Existing Containers') {
             steps {
-                echo '⛔ Stopping existing containers...'
+                echo ' Stopping existing containers...'
                 sh 'docker compose down || true'
             }
         }
 
         stage('Deploy Containers') {
             steps {
-                echo '🚀 Starting services...'
+                echo ' Starting services...'
                 sh 'docker compose up -d'
             }
         }
 
         stage('Verify Deployment') {
             steps {
-                echo '✅ Verifying services...'
+                echo ' Verifying services...'
                 sh 'docker compose ps'
                 sh 'sleep 5'
                 sh 'curl http://localhost:3001 || true'
@@ -356,10 +356,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Pipeline completed successfully!'
+            echo ' Pipeline completed successfully!'
         }
         failure {
-            echo '❌ Pipeline failed. Rolling back...'
+            echo ' Pipeline failed. Rolling back...'
             sh 'docker compose down || true'
         }
     }
@@ -570,7 +570,7 @@ networks:
 
 ---
 
-## 🐳 Service Dockerfile Example
+##  Service Dockerfile Example
 
 ### user-service/Dockerfile
 ```dockerfile
@@ -607,7 +607,7 @@ CMD ["node", "app.js"]
 
 ---
 
-## 🌐 Application URLs
+##  Application URLs
 
 ### Local Development
 ```
@@ -626,7 +626,7 @@ Jenkins:          http://<EC2_PUBLIC_IP>:8080
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### 1. **Fully Automated CI/CD**
 - Automatic pipeline triggers on git push
@@ -659,8 +659,7 @@ Jenkins:          http://<EC2_PUBLIC_IP>:8080
 - Reusable pipeline patterns
 
 ---
-
-## ⚠️ Challenges Faced & Solutions
+##  Challenges Faced & Solutions
 
 ### 1. **Jenkins Git Branch Misconfiguration**
 
@@ -830,7 +829,7 @@ docker inspect user-service
 
 ---
 
-## 🔒 Security Best Practices
+##  Security Best Practices
 
 ### 1. Protect Sensitive Data
 ```bash
@@ -873,7 +872,7 @@ USER appuser
 
 ---
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Services Not Starting
 ```bash
@@ -929,7 +928,7 @@ kill -9 <PID>
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Docker Documentation](https://docs.docker.com/)
 - [Docker Compose Guide](https://docs.docker.com/compose/)
@@ -939,7 +938,7 @@ kill -9 <PID>
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these guidelines:
 
@@ -967,13 +966,13 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📝 License
+##  License
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
 ---
 
-## 📞 Support & Questions
+##  Support & Questions
 
 - **Issues:** Open an issue on GitHub for bugs or questions
 - **Discussions:** Use GitHub Discussions for general questions
@@ -988,15 +987,14 @@ This project is licensed under the **MIT License** — see the [LICENSE](./LICEN
 - Community contributions and feedback
 
 ---
-
-**Project Status:** ✅ Active & Maintained  
+ Active & Maintained  
 **Last Updated:** April 2024  
 **Version:** 1.0.0  
 **Maintained by:** Prateek Gajbar
 
 ---
 
-## 🚀 Quick Reference
+##  Quick Reference
 ```bash
 # Clone & Setup
 git clone https://github.com/prateekgajbar/microservices-ci-cd.git
