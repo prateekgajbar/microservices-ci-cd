@@ -1,8 +1,8 @@
-# 🚀 Microservices CI/CD Pipeline using Jenkins & Docker
+#  Microservices CI/CD Pipeline using Jenkins & Docker
 
 A complete CI/CD pipeline implementation for microservices using **Jenkins**, **Docker Compose**, and **AWS EC2** — demonstrating automated build, test, and deployment workflows without Kubernetes.
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a **production-ready CI/CD pipeline** that automates the entire software delivery process:
 
@@ -18,7 +18,7 @@ This project demonstrates a **production-ready CI/CD pipeline** that automates t
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### High-Level Pipeline Flow
 ```
@@ -303,7 +303,7 @@ docker compose exec user-service npm test
 
 ---
 
-## 🔄 Jenkins Pipeline
+##  Jenkins Pipeline
 
 ### Jenkinsfile Structure
 ```groovy
